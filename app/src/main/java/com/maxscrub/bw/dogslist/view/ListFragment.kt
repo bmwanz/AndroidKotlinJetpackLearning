@@ -24,10 +24,13 @@ class ListFragment : Fragment() {
 
         buttonDetails.setOnClickListener{
             val action = ListFragmentDirections.actionToDetailFrag()
+            action.dogUUID = 5
             Navigation.findNavController(it).navigate(action)
 
             // navigation will handle swapping fragment
             // if res/navigation/dog_navigation is set up correctly
+
+            // passing argument dogUUID = 5 to DetailFragment
         }
     }
 }
