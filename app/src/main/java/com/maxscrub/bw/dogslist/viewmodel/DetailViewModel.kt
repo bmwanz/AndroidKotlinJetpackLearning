@@ -11,7 +11,12 @@ class DetailViewModel : ViewModel() {
 
     fun fetch() {
 
-        val dog = DogBreed("1", "Corgi", "15 years", "breedGroup", "bredFor", "temperament", "")
+        val dog = DogBreed(
+            "1",
+            "Corgi", "15 years",
+            "breedGroup", "bredFor", "temperament",
+            ""
+        )
         dogLiveData.value = dog
     }
 }
