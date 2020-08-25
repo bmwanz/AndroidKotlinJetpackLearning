@@ -45,7 +45,7 @@ class ListFragment : Fragment() {
             listError.visibility = View.GONE
             loadingView.visibility = View.VISIBLE
 
-            viewModel.refresh()
+            viewModel.refreshBypassCache()
 
             // make default spinner disappear, use our own spinner
             refreshLayout.isRefreshing = false
