@@ -32,6 +32,8 @@ class SharedPreferencesHelper {
     @SuppressLint("CommitPrefEdits")
     fun saveUpdateTime(time: Long) {
         // not sure here
-        prefs?.edit()?.putLong(PREF_TIME, time)
+        prefs?.edit()?.putLong(PREF_TIME, time)?.apply()
     }
+
+    fun getUpdateTime() = prefs?.getLong(PREF_TIME, 0)
 }
