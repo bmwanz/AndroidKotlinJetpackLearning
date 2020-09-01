@@ -1,18 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <data>
+        <variable
+            name="dog"
+            type="com.maxscrub.bw.dogslist.model.DogBreed" />
+        <variable
+            name="listener"
+            type="com.maxscrub.bw.dogslist.view.DogClickListener" />
+    </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="125dp"
+        android:onClick="@{listener::onDogClicked}"
         android:orientation="horizontal">
+
+        <!-- just to hold uuid -->
+        <TextView
+            android:id="@+id/dogId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(dog.uuid)}"
+            android:visibility="gone" />
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:padding="4dp"
-            android:contentDescription="@string/empty" />
+            android:contentDescription="@string/empty"
+            android:imageUrl="@{dog.imageUrl}"
+            android:padding="4dp" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -27,16 +46,14 @@
                 style="@style/Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="DogName" />
+                android:text="@{dog.dogBreed}" />
 
             <TextView
                 android:id="@+id/lifespan"
                 style="@style/Text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lifespan" />
-
-
+                android:text="@{dog.lifeSpan}" />
 
         </LinearLayout>
 
