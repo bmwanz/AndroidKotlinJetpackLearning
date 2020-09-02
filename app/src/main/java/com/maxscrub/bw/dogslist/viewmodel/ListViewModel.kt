@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import com.maxscrub.bw.dogslist.model.DogBreed
 import com.maxscrub.bw.dogslist.model.DogDatabase
 import com.maxscrub.bw.dogslist.model.DogsApiService
+import com.maxscrub.bw.dogslist.util.NotificationsHelper
 import com.maxscrub.bw.dogslist.util.SharedPreferencesHelper
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
@@ -70,6 +71,8 @@ class ListViewModel(application: Application) : BaseViewModel(application) {
                             Toast.LENGTH_SHORT
                         ).show()
 
+                        // emulators may have issues with notifications
+                        NotificationsHelper(getApplication()).createNotification()
                     }
 
                     override fun onError(e: Throwable) {
