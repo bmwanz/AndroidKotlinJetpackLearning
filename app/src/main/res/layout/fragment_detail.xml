@@ -7,11 +7,16 @@
         <variable
             name="dog"
             type="com.maxscrub.bw.dogslist.model.DogBreed" />
+
+        <variable
+            name="palatte"
+            type="com.maxscrub.bw.dogslist.model.DogPalette" />
     </data>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@{palatte.color}"
         tools:context=".view.DetailFragment">
 
         <ImageView
