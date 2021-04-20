@@ -9,8 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.maxscrub.bw.dogslist.R
 import com.maxscrub.bw.dogslist.databinding.ItemDogBinding
 import com.maxscrub.bw.dogslist.model.DogBreed
-import com.maxscrub.bw.dogslist.util.getProgressDrawable
-import com.maxscrub.bw.dogslist.util.loadImage
 import kotlinx.android.synthetic.main.item_dog.view.*
 
 class DogsListAdapter(val dogsList: ArrayList<DogBreed>) :

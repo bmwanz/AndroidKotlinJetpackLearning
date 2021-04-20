@@ -29,15 +29,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu, menu)
+//        menuInflater.inflate(R.menu.menu, menu)
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         /* https://devofandroid.blogspot.com/2018/03/add-itemsmenu-in-actionbartoolbar.html */
-        if (item.itemId == R.id.menu_target) {
-            Toast.makeText(this, "Target Tapped", Toast.LENGTH_SHORT).show()
-        }
+//        if (item.itemId == R.id.menu_target) {
+//            Toast.makeText(this, "Target Tapped", Toast.LENGTH_SHORT).show()
+//        }
         return super.onOptionsItemSelected(item)
     }
 }
